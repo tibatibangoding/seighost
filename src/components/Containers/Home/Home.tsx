@@ -6,13 +6,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
+import { RiTwitterXFill } from 'react-icons/ri';
+import { FaDiscord } from 'react-icons/fa';
+
 const ContainerHome: FC = () => {
   const [scale, setScale] = useState<number>(1);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const newScale = 1 + scrollY * 0.0001; // Sesuaikan faktor skala sesuai kebutuhan Anda
+      const newScale = 1 + scrollY * 0.001; // Sesuaikan faktor skala sesuai kebutuhan Anda
       setScale(newScale);
     };
 
@@ -82,172 +85,146 @@ const ContainerHome: FC = () => {
             className="mySwiper "
           >
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl">
-                <video
-                  controls
-                  loop
-                  autoplay
-                  playsInline
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
                   className="object-cover"
-                >
-                  <source src="/video/7.mp4" type="video/mp4" />
-                </video>
+                />
               </div>
             </SwiperSlide>
           </Swiper>
@@ -277,60 +254,250 @@ const ContainerHome: FC = () => {
             className="mySwiper "
           >
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[200px] h-[200px] bg-red-500 rounded-xl"></div>
+              <div className="w-[200px]  rounded-xl">
+                <Image
+                  src={'/images/7.gif'}
+                  width={200}
+                  height={200}
+                  alt="hero"
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
           </Swiper>
+        </div>
+      </section>
+      <section className="mt-24 w-full">
+        <div className="flex flex-col gap-10">
+          <div className="flex items-center justify-center gap-20">
+            <Image
+              src={'/images/hero.gif'}
+              width={200}
+              height={200}
+              alt="hero"
+              className="object-cover"
+            />
+            <div className="">
+              <h1 className="text-5xl text-amber-950 text-center font-extrabold ">
+                WELCOME TO
+                <br />
+                <span className="text-9xl">ABRAXUS</span>
+                <br /> HOME OF SEIAVATARS
+              </h1>
+            </div>
+            <Image
+              src={'/images/hero.gif'}
+              width={200}
+              height={200}
+              alt="hero"
+              className="object-cover"
+            />
+          </div>
+          <div className="flex flex-col items-center justify-center gap-16 text-3xl text-amber-950 text-center font-extrabold ">
+            <h1 className="w-2/3 text-amber-950 text-center font-extrabold ">
+              The Abraxus Collective is our fully animated collection of 5555
+              pixel art NFTs, each with their own unique story.
+            </h1>
+            <p>OG Minters (Holders) Prioritised.</p>
+            <div className="flex gap-10">
+              <div className="flex gap-3 items-center">
+                <RiTwitterXFill className="text-4xl" />
+                <h1>@seighost</h1>
+              </div>
+              <div className="flex gap-3 items-center">
+                <FaDiscord className="text-4xl" />
+                <h1>Discord</h1>
+              </div>
+            </div>
+            <div></div>
+          </div>
         </div>
       </section>
       {/* <section className="w-full  mt-4"></section> */}
