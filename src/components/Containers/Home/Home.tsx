@@ -24,7 +24,7 @@ const ContainerHome: FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const newScale = 1 + scrollY * 0.001; // Sesuaikan faktor skala sesuai kebutuhan Anda
+      const newScale = 1 + scrollY * 0.001; 
       setScale(newScale);
     };
 
@@ -37,7 +37,7 @@ const ContainerHome: FC = () => {
 
   return (
     <>
-      <div className="h-screen fixed -z-50">
+      <div className="h-[2500px] w-[2500px] fixed -z-50">
         <Image
           src="/images/pxfuel.jpg"
           alt="Picture of the author"
@@ -47,7 +47,7 @@ const ContainerHome: FC = () => {
         />
       </div>
       <section className="w-full h-screen">
-        <div className="relative w-full h-full" style={{ overflow: 'hidden' }}>
+        <div className="relative w-full h-full " style={{ overflow: 'hidden' }}>
           <Image
             src="/images/bg-seivatars.png"
             alt="Picture of the author"
