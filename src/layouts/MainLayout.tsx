@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import Navbar from '@/components/Mixins/Navbar/Navbar';
-import Footer from '@/components/Mixins/Footer';
+// import Navbar from '@/components/Mixins/Navbar/Navbar';
+// import Footer from '@/components/Mixins/Footer';
 
 type Props = {
   children: React.ReactNode;
@@ -10,11 +10,11 @@ type Props = {
 const MainLayout: FC<Props> = ({ children }) => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <main className="pt-24 pb-24 mt-40 mb-40">{children}</main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
