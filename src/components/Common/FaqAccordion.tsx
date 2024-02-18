@@ -27,7 +27,7 @@ const Accordion: React.FC<AccordionProps> = ({
         className={`overflow-hidden transition-all duration-300 ${
           isOpen
             ? 'max-h-[500px] opacity-100 transform translate-y-0'
-            : 'max-h-0 opacity-0 transform -translate-y-2'
+            : 'max-h-0 opacity-0 transform -translate-y-2 '
         }`}
       >
         {isOpen && <div>{content}</div>}
