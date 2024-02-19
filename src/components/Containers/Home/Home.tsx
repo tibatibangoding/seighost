@@ -37,6 +37,7 @@ const slideData = [
 const ContainerHome: FC = () => {
   const [scale, setScale] = useState<number>(1);
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const handleToggleAccordion = (accordionNumber: number) => {
     setOpenAccordion((prev) =>
@@ -62,7 +63,7 @@ const ContainerHome: FC = () => {
     <>
       <div className="relative overflow-x-hidden">
         <div
-          className="h-[2500px] w-screen fixed -z-50"
+          className="h-[1080px] w-screen fixed -z-50"
           style={{
             backgroundImage: `url('/images/pxfuel.jpg')`,
             backgroundSize: 'cover',
@@ -88,43 +89,89 @@ const ContainerHome: FC = () => {
               width={300}
               height={300}
               alt="hero"
-              className="absolute bottom-0 md:inline-block hidden left-0"
+              className="absolute bottom-0 md:inline-block  left-0"
             />
           </div>
         </section>
 
         <section className="flex flex-col gap-4 mt-4 max-w-screen">
-          {['', 'rtl'].map((dir, index) => (
-            <div key={index} className={`w-full ${dir && 'dir="rtl"'}`}>
-              <Swiper
-                breakpoints={{
-                  375: { slidesPerView: 2 },
-                  576: { slidesPerView: 2 },
-                  768: { slidesPerView: 8 },
-                }}
-                spaceBetween={30}
-                autoplay={{ delay: 0 }}
-                speed={2000}
-                loop={true}
-                modules={[Autoplay]}
-                className="mySwiper "
-              >
-                {slideData.map((src, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="w-[200px] rounded-xl">
-                      <Image
-                        src={src}
-                        width={200}
-                        height={200}
-                        alt="hero"
-                        className="object-cover"
-                      />
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          ))}
+          <div className="w-full">
+            <Swiper
+              breakpoints={{
+                375: { slidesPerView: 2 },
+                576: { slidesPerView: 2 },
+                768: { slidesPerView: 8 },
+              }}
+              spaceBetween={30}
+              autoplay={{ delay: 0 }}
+              speed={4000}
+              loop={true}
+              modules={[Autoplay]}
+              className="mySwiper"
+            >
+              {slideData.map((src, index) => (
+                <SwiperSlide key={index}>
+                  <div
+                    className={`w-[200px] rounded-xl transition-transform duration-300 ${
+                      hoveredIndex !== null && hoveredIndex !== index
+                        ? 'grayscale'
+                        : 'grayscale-0'
+                    }`}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    <Image
+                      src={src}
+                      width={200}
+                      height={200}
+                      alt="hero"
+                      className="object-cover rounded-xl grayscale-100 hover:grayscale-0"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          {/* Second row with reversed direction */}
+          <div className="w-full">
+            <Swiper
+              breakpoints={{
+                375: { slidesPerView: 2 },
+                576: { slidesPerView: 2 },
+                768: { slidesPerView: 8 },
+              }}
+              spaceBetween={30}
+              autoplay={{ delay: 0 }}
+              speed={4000}
+              loop={true}
+              modules={[Autoplay]}
+              className="mySwiper"
+              style={{ direction: 'rtl' }}
+            >
+              {slideData.map((src, index) => (
+                <SwiperSlide key={index}>
+                  <div
+                    className={`w-[200px] rounded-xl transition-transform duration-300 ${
+                      hoveredIndex !== null && hoveredIndex !== index
+                        ? 'grayscale'
+                        : 'grayscale-0'
+                    }`}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    <Image
+                      src={src}
+                      width={200}
+                      height={200}
+                      alt="hero"
+                      className="object-cover rounded-xl grayscale-100 hover:grayscale-0"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </section>
 
         <section className="mt-24 w-full max-w-7xl mx-auto">
@@ -159,7 +206,16 @@ const ContainerHome: FC = () => {
               <p>OG Minters (Holders) Prioritised.</p>
               <div className="flex gap-10">
                 <div className="flex gap-3 items-center">
-                  <RiTwitterXFill className="text-4xl" />
+                  <a
+                    href="https://x.com/seighostnft/"
+                    target="blank"
+                    style={{ cursor: 'url(/images/cursor.png), auto' }}
+                  >
+                    <RiTwitterXFill
+                      className="text-4xl mx-auto hover:opacity-50 "
+                      style={{ cursor: 'url(/images/cursor.png), auto' }}
+                    />
+                  </a>
                   <h1>@seighost</h1>
                 </div>
                 <div className="flex gap-3 items-center">
@@ -320,12 +376,12 @@ const ContainerHome: FC = () => {
               <div className="text-center text-orange-950">
                 <p className="font-extrabold text-4xl my-3">Messi</p>
                 <p className="font-bold text-2xl opacity-60">RWF</p>
-                <a href="/" style={{ cursor: 'url(/images/cursor.png), auto' }}>
+                {/* <a href="/" style={{ cursor: 'url(/images/cursor.png), auto' }}>
                   <RiTwitterXFill
                     className="text-4xl mx-auto hover:opacity-50 "
                     style={{ cursor: 'url(/images/cursor.png), auto' }}
                   />
-                </a>
+                </a> */}
               </div>
             </div>
 
@@ -341,12 +397,12 @@ const ContainerHome: FC = () => {
               <div className="text-center text-orange-950">
                 <p className="font-extrabold text-4xl my-3">Neymar</p>
                 <p className="font-bold text-2xl opacity-60">LWF</p>
-                <a href="/" style={{ cursor: 'url(/images/cursor.png), auto' }}>
+                {/* <a href="/" style={{ cursor: 'url(/images/cursor.png), auto' }}>
                   <RiTwitterXFill
                     className="text-4xl mx-auto hover:opacity-50 "
                     style={{ cursor: 'url(/images/cursor.png), auto' }}
                   />
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="items-center">
@@ -361,12 +417,12 @@ const ContainerHome: FC = () => {
               <div className="text-center text-orange-950">
                 <p className="font-extrabold text-4xl my-3">Pele</p>
                 <p className="font-bold text-2xl opacity-60">CF</p>
-                <a href="/" style={{ cursor: 'url(/images/cursor.png), auto' }}>
+                {/* <a href="/" style={{ cursor: 'url(/images/cursor.png), auto' }}>
                   <RiTwitterXFill
                     className="text-4xl mx-auto hover:opacity-50 "
                     style={{ cursor: 'url(/images/cursor.png), auto' }}
                   />
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="items-center">
@@ -381,12 +437,12 @@ const ContainerHome: FC = () => {
               <div className="text-center text-orange-950">
                 <p className="font-extrabold text-4xl my-3">Naruto</p>
                 <p className="font-bold text-2xl opacity-60">Boruto`s Father</p>
-                <a href="/" style={{ cursor: 'url(/images/cursor.png), auto' }}>
+                {/* <a href="/" style={{ cursor: 'url(/images/cursor.png), auto' }}>
                   <RiTwitterXFill
                     className="text-4xl mx-auto hover:opacity-50 "
                     style={{ cursor: 'url(/images/cursor.png), auto' }}
                   />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

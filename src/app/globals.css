@@ -25,6 +25,8 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 
+   
+
     cursor: url('/images/cursor.png'), auto;
     cursor: url('/images/cursor.png'), default;
     cursor: url('/images/cursor.png'), pointer;
@@ -34,4 +36,7 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+.custom-rtl .swiper-wrapper {
+  flex-direction: row-reverse;
 }
