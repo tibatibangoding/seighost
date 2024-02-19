@@ -41,7 +41,7 @@ const ContainerHome: FC = () => {
 
   const handleToggleAccordion = (accordionNumber: number) => {
     setOpenAccordion((prev) =>
-      prev === accordionNumber ? null : accordionNumber
+      prev === accordionNumber ? null : accordionNumber,
     );
   };
 
