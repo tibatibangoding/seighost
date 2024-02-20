@@ -9,6 +9,7 @@ import 'swiper/css';
 
 import StackedCarousel from './components/StackedCarousel';
 import Accordion from './components/FaqAccordion';
+import Form from './components/Form';
 
 const slideData = [
   '/images/7.gif',
@@ -175,6 +176,10 @@ const ContainerHome: FC = () => {
               ))}
             </Swiper>
           </div>
+        </section>
+
+        <section className="mt-24">
+          <Form />
         </section>
 
         <section className="mt-24 w-full max-w-7xl mx-auto">

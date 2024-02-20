@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, FC } from 'react';
 import Image from 'next/image';
 
-const StackedCarousel: React.FC = () => {
+const StackedCarousel: FC = () => {
   const [hoveredImage, setHoveredImage] = useState<number>(1); // Set initial state to 1
   const [isMobile, setIsMobile] = useState<boolean>(false);
 

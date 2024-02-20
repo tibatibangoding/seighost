@@ -1,13 +1,13 @@
-import React from 'react';
+import { FC, ReactNode } from 'react';
 
 interface AccordionProps {
   title: string;
-  content: React.ReactNode;
+  content: ReactNode;
   isOpen: boolean;
   onToggle: () => void;
 }
 
-const Accordion: React.FC<AccordionProps> = ({
+const Accordion: FC<AccordionProps> = ({
   title,
   content,
   isOpen,
