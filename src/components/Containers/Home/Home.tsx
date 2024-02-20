@@ -191,7 +191,7 @@ const ContainerHome: FC = () => {
               <h1 className="text-2xl md:text-5xl text-white text-center font-extrabold inline-block">
                 WELCOME TO
                 <br />
-                <span className="text-5xl md:text-9xl">ABRAXUS</span>
+                <span className="text-5xl md:text-9xl">SEIGHOST</span>
                 <br /> HOME OF SEIAVATARS
               </h1>
               <Image
