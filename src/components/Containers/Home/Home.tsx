@@ -1,15 +1,14 @@
 'use client';
 import { FC, useState, useEffect } from 'react';
-
-import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
-
 import { RiTwitterXFill } from 'react-icons/ri';
 import { FaDiscord } from 'react-icons/fa';
-import StackedCarousel from '@/components/Common/StackedCarousel';
-import Accordion from '@/components/Common/FaqAccordion';
+import Image from 'next/image';
+import 'swiper/css';
+
+import StackedCarousel from './components/StackedCarousel';
+import Accordion from './components/FaqAccordion';
 
 const slideData = [
   '/images/7.gif',
@@ -74,7 +73,7 @@ const ContainerHome: FC = () => {
         <section className="w-full h-screen">
           <div className="relative w-screen h-screen overflow-hidden max-w-screen">
             <Image
-              src="/images/bg-seivatars.png"
+              src="/images/banner_logo_1.jpg"
               alt="Picture of the author"
               width={10000}
               height={0}
@@ -83,13 +82,15 @@ const ContainerHome: FC = () => {
                 transform: `scale(${scale})`,
                 transition: 'transform 0.15s ease-in-out',
               }}
+              loading="lazy"
             />
             <Image
               src={'/images/hero.gif'}
               width={300}
               height={300}
               alt="hero"
-              className="absolute bottom-0 md:inline-block  left-0"
+              className="absolute bottom-0 md:inline-block left-0"
+              loading="lazy"
             />
           </div>
         </section>
@@ -126,6 +127,7 @@ const ContainerHome: FC = () => {
                       height={200}
                       alt="hero"
                       className="object-cover rounded-xl grayscale-100 hover:grayscale-0"
+                      loading="lazy"
                     />
                   </div>
                 </SwiperSlide>
@@ -166,6 +168,7 @@ const ContainerHome: FC = () => {
                       height={200}
                       alt="hero"
                       className="object-cover rounded-xl grayscale-100 hover:grayscale-0"
+                      loading="lazy"
                     />
                   </div>
                 </SwiperSlide>
@@ -175,7 +178,7 @@ const ContainerHome: FC = () => {
         </section>
 
         <section className="mt-24 w-full max-w-7xl mx-auto">
-          <div className="flex flex-col items-center justify-center gap-16 text-3xl text-amber-950 text-center font-extrabold ">
+          <div className="flex flex-col items-center justify-center gap-16 text-3xl text-white text-center font-extrabold ">
             <div className="text-center">
               <Image
                 src={'/images/hero.gif'}
@@ -183,8 +186,9 @@ const ContainerHome: FC = () => {
                 height={200}
                 alt="hero"
                 className="object-cover md:inline-block hidden"
+                loading="lazy"
               />
-              <h1 className="text-2xl md:text-5xl text-amber-950 text-center font-extrabold inline-block">
+              <h1 className="text-2xl md:text-5xl text-white text-center font-extrabold inline-block">
                 WELCOME TO
                 <br />
                 <span className="text-5xl md:text-9xl">ABRAXUS</span>
@@ -196,10 +200,11 @@ const ContainerHome: FC = () => {
                 height={200}
                 alt="hero"
                 className="object-cover md:inline-block hidden"
+                loading="lazy"
               />
             </div>
-            <div className="flex flex-col items-center justify-center gap-16 text-lg md:text-3xl text-amber-950 text-center font-extrabold ">
-              <h1 className="w-2/3 text-amber-950 text-center font-extrabold ">
+            <div className="flex flex-col items-center justify-center gap-16 text-lg md:text-3xl text-white text-center font-extrabold ">
+              <h1 className="w-2/3 text-white text-center font-extrabold ">
                 The Abraxus Collective is our fully animated collection of 5555
                 pixel art NFTs, each with their own unique story.
               </h1>
@@ -226,13 +231,14 @@ const ContainerHome: FC = () => {
               <div>
                 <a
                   href="https://pallet.exchange/collection/sei-avatars"
-                  className="flex items-center gap-4 text-orange-950/90 font-extrabold text-4xl hover:opacity-70"
+                  className="flex items-center gap-4 text-white font-extrabold text-4xl hover:opacity-70"
                 >
                   <Image
                     src={'/images/Pallet.png'}
                     alt="Your SVG"
                     width={40}
                     height={40}
+                    loading="lazy"
                   />
                   Pallete Exchange
                 </a>
@@ -249,13 +255,14 @@ const ContainerHome: FC = () => {
                 alt="Your SVG"
                 width={180}
                 height={180}
+                loading="lazy"
               />
             </div>
             <div className="box p-4 text-center">
-              <p className="text-orange-950/90 text-2xl md:text-5xl font-extrabold mb-2">
+              <p className="text-white text-2xl md:text-5xl font-extrabold mb-2">
                 Only The
               </p>
-              <p className="text-orange-950/90 text-4xl md:text-8xl font-extrabold">
+              <p className="text-white text-4xl md:text-8xl font-extrabold">
                 Beginning
               </p>
             </div>
@@ -265,6 +272,7 @@ const ContainerHome: FC = () => {
                 alt="Your SVG"
                 width={180}
                 height={180}
+                loading="lazy"
               />
             </div>
           </div>
@@ -273,7 +281,7 @@ const ContainerHome: FC = () => {
         </section>
 
         <section className=" mt-44 max-w-7xl mx-auto ">
-          <div className="text-center uppercase font-extrabold text-orange-950">
+          <div className="text-center uppercase font-extrabold text-white">
             <h1 className=" text-2xl md:text-5xl">Free Access To</h1>
             <h1 className=" text-4xl md:text-7xl mt-3">
               Collectibles and upgrades{' '}
@@ -285,11 +293,12 @@ const ContainerHome: FC = () => {
               width={400}
               alt="Hero"
               className="mx-auto"
+              loading="lazy"
             />
           </div>
         </section>
         <section className=" mt-44 max-w-7xl mx-auto ">
-          <h1 className="mx-auto text-center text-orange-950 font-extrabold text-7xl">
+          <h1 className="mx-auto text-center text-white font-extrabold text-7xl">
             FAQ
           </h1>
           <div className="md:flex items-center">
@@ -297,7 +306,7 @@ const ContainerHome: FC = () => {
               <Accordion
                 title="Where I Can Learn About SeiGhost?"
                 content={
-                  <div className="text-orange-950 font-extrabold text-md md:text-xl flex my-5">
+                  <div className="text-white font-extrabold text-md md:text-xl flex my-5">
                     <p>
                       Join ABRARXUS in out
                       <a
@@ -316,7 +325,7 @@ const ContainerHome: FC = () => {
               <Accordion
                 title="WHAT IS THE VISION OF SEIAVATARS?"
                 content={
-                  <div className="text-orange-950 font-extrabold text-md md:text-xl flex my-5">
+                  <div className="text-white font-extrabold text-md md:text-xl flex my-5">
                     <p>
                       Seiavatars are an access token to a living ecosystem. At
                       the heart of SeiAvatars lies a distinct ethos where
@@ -332,7 +341,7 @@ const ContainerHome: FC = () => {
               <Accordion
                 title="WHERE CAN I BUY A SEIAVATAR?"
                 content={
-                  <div className="text-orange-950 font-extrabold text-md nd:text-xl flex my-5">
+                  <div className="text-white font-extrabold text-md nd:text-xl flex my-5">
                     <p>We are listed</p>
                     <a
                       href="https://discord.com"
@@ -353,13 +362,14 @@ const ContainerHome: FC = () => {
                 width={400}
                 alt="Hero"
                 className="mx-auto"
+                loading="lazy"
               />
             </div>
           </div>
         </section>
 
         <section className="my-44 max-w-5xl mx-auto">
-          <div className="text-center font-extrabold text-orange-950 text-7xl uppercase">
+          <div className="text-center font-extrabold text-white text-7xl uppercase">
             <h1>Team</h1>
           </div>
 
@@ -370,12 +380,13 @@ const ContainerHome: FC = () => {
                 width={150}
                 height={150}
                 alt="Team Member 1"
-                className="rounded-full w-72 h-72  mx-auto"
+                className="rounded-full w-72 h-72 mx-auto"
+                loading="lazy"
               />
 
-              <div className="text-center text-orange-950">
-                <p className="font-extrabold text-4xl my-3">Messi</p>
-                <p className="font-bold text-2xl opacity-60">RWF</p>
+              <div className="text-center text-white">
+                <p className="font-extrabold text-4xl my-3">Hokichi</p>
+                {/* <p className="font-bold text-2xl opacity-60">RWF</p> */}
                 {/* <a href="/" style={{ cursor: 'url(/images/cursor.png), auto' }}>
                   <RiTwitterXFill
                     className="text-4xl mx-auto hover:opacity-50 "
@@ -391,12 +402,13 @@ const ContainerHome: FC = () => {
                 width={150}
                 height={150}
                 alt="Team Member 2"
-                className="rounded-full w-72 h-72  mx-auto"
+                className="rounded-full w-72 h-72 mx-auto"
+                loading="lazy"
               />
 
-              <div className="text-center text-orange-950">
-                <p className="font-extrabold text-4xl my-3">Neymar</p>
-                <p className="font-bold text-2xl opacity-60">LWF</p>
+              <div className="text-center text-white">
+                <p className="font-extrabold text-4xl my-3">Mack</p>
+                {/* <p className="font-bold text-2xl opacity-60">LWF</p> */}
                 {/* <a href="/" style={{ cursor: 'url(/images/cursor.png), auto' }}>
                   <RiTwitterXFill
                     className="text-4xl mx-auto hover:opacity-50 "
@@ -411,12 +423,13 @@ const ContainerHome: FC = () => {
                 width={150}
                 height={150}
                 alt="Team Member 2"
-                className="rounded-full w-72 h-72  mx-auto"
+                className="rounded-full w-72 h-72 mx-auto"
+                loading="lazy"
               />
 
-              <div className="text-center text-orange-950">
-                <p className="font-extrabold text-4xl my-3">Pele</p>
-                <p className="font-bold text-2xl opacity-60">CF</p>
+              <div className="text-center text-white">
+                <p className="font-extrabold text-4xl my-3">Ahmed</p>
+                {/* <p className="font-bold text-2xl opacity-60">CF</p> */}
                 {/* <a href="/" style={{ cursor: 'url(/images/cursor.png), auto' }}>
                   <RiTwitterXFill
                     className="text-4xl mx-auto hover:opacity-50 "
@@ -431,12 +444,13 @@ const ContainerHome: FC = () => {
                 width={150}
                 height={150}
                 alt="Team Member 2"
-                className="rounded-full w-72 h-72  mx-auto"
+                className="rounded-full w-72 h-72 mx-auto"
+                loading="lazy"
               />
 
-              <div className="text-center text-orange-950">
-                <p className="font-extrabold text-4xl my-3">Naruto</p>
-                <p className="font-bold text-2xl opacity-60">Boruto`s Father</p>
+              <div className="text-center text-white">
+                <p className="font-extrabold text-4xl my-3">Jackey</p>
+                {/* <p className="font-bold text-2xl opacity-60">Boruto`s Father</p> */}
                 {/* <a href="/" style={{ cursor: 'url(/images/cursor.png), auto' }}>
                   <RiTwitterXFill
                     className="text-4xl mx-auto hover:opacity-50 "

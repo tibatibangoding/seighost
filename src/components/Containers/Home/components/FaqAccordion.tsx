@@ -16,7 +16,7 @@ const Accordion: React.FC<AccordionProps> = ({
   return (
     <div className="my-5">
       <h1
-        className={`text-orange-950 font-extrabold text-xl md:text-3xl cursor-pointer transition-opacity duration-300 ${
+        className={`text-white font-extrabold text-xl md:text-3xl cursor-pointer transition-opacity duration-300 ${
           isOpen ? 'opacity-100' : 'opacity-50 hover:opacity-100'
         }`}
         onClick={onToggle}
