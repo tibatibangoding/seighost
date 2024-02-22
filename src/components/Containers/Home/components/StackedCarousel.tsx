@@ -66,7 +66,7 @@ const StackedCarousel: FC = () => {
           </div>
         </div>
       ) : (
-        <div className="flex gap-1 max-w-[800px] mx-auto items-stretch">
+        <div className="flex  max-w-[800px] mx-auto items-stretch">
           {[1, 2, 3, 4].map((imageNumber) => (
             <div
               key={imageNumber}
@@ -74,7 +74,7 @@ const StackedCarousel: FC = () => {
                 hoveredImage !== imageNumber
                   ? 'grayscale h-[900px]'
                   : 'grayscale-0 w-[800px] '
-              } overflow-hidden`}
+              } overflow-hidden border-2 border-white`}
               onMouseEnter={() => setHoveredImage(imageNumber)}
               onMouseLeave={handleMouseLeave}
             >

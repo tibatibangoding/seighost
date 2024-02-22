@@ -44,6 +44,7 @@ const ContainerHome: FC = () => {
   const [scale, setScale] = useState<number>(1);
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex2, setHoveredIndex2] = useState<number | null>(null);
 
   const handleToggleAccordion = (accordionNumber: number) => {
     setOpenAccordion((prev) =>
@@ -168,7 +169,8 @@ const ContainerHome: FC = () => {
                 <SwiperSlide key={index}>
                   <div
                     className={`w-[200px] rounded-xl transition-transform duration-300 ${
-                      hoveredIndex !== null && hoveredIndex !== index
+                      (hoveredIndex !== null && hoveredIndex !== index) ||
+                      hoveredIndex2 !== null
                         ? 'grayscale'
                         : 'grayscale-0'
                     }`}
@@ -209,12 +211,13 @@ const ContainerHome: FC = () => {
                 <SwiperSlide key={index}>
                   <div
                     className={`w-[200px] rounded-xl transition-transform duration-300 ${
-                      hoveredIndex !== null && hoveredIndex !== index
+                      (hoveredIndex2 !== null && hoveredIndex2 !== index) ||
+                      hoveredIndex !== null
                         ? 'grayscale'
                         : 'grayscale-0'
                     }`}
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
+                    onMouseEnter={() => setHoveredIndex2(index)}
+                    onMouseLeave={() => setHoveredIndex2(null)}
                   >
                     <Image
                       src={src}
@@ -268,28 +271,34 @@ const ContainerHome: FC = () => {
               </h1>
               <p>OG Minters (Holders) Prioritised.</p>
               <div className="flex gap-10">
-                <div className="flex gap-3 items-center">
-                  <a
-                    href="https://x.com/seighostnft/"
-                    target="blank"
+                <a
+                  href="https://x.com/seighostnft/"
+                  target="blank"
+                  style={{ cursor: 'url(/images/cursor.png), auto' }}
+                  className="flex items-center gap-4 text-white font-extrabold text-4xl hover:opacity-70"
+                >
+                  <RiTwitterXFill
+                    className="text-4xl mx-auto hover:opacity-50 "
                     style={{ cursor: 'url(/images/cursor.png), auto' }}
-                  >
-                    <RiTwitterXFill
-                      className="text-4xl mx-auto hover:opacity-50 "
-                      style={{ cursor: 'url(/images/cursor.png), auto' }}
-                    />
-                  </a>
+                  />
                   <h1>@seighost</h1>
-                </div>
-                <div className="flex gap-3 items-center">
+                </a>
+
+                <a
+                  href="https://discord.gg/pQSFrHCh/"
+                  target="blank"
+                  style={{ cursor: 'url(/images/cursor.png), auto' }}
+                  className="flex items-center gap-4 text-white font-extrabold text-4xl hover:opacity-70"
+                >
                   <FaDiscord className="text-4xl" />
                   <h1>Discord</h1>
-                </div>
+                </a>
               </div>
               <div>
                 <a
                   href="https://pallet.exchange/collection/sei-avatars"
                   className="flex items-center gap-4 text-white font-extrabold text-4xl hover:opacity-70"
+                  style={{ cursor: 'url(/images/cursor.png), auto' }}
                 >
                   <Image
                     src={'/images/Pallet.png'}
