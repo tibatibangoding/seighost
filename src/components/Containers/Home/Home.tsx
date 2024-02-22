@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { RiTwitterXFill } from 'react-icons/ri';
 import { FaDiscord } from 'react-icons/fa';
+import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
+
 import Image from 'next/image';
 import 'swiper/css';
 
@@ -11,27 +13,31 @@ import StackedCarousel from './components/StackedCarousel';
 import Accordion from './components/FaqAccordion';
 import Form from './components/Form';
 
-const slideData = [
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
-  '/images/7.gif',
+const slideData1 = [
+  '/images/nft/0.png',
+  '/images/nft/1.png',
+  '/images/nft/2.png',
+  '/images/nft/3.png',
+  '/images/nft/4.png',
+  '/images/nft/5.png',
+  '/images/nft/6.png',
+  '/images/nft/7.png',
+  '/images/nft/8.png',
+  '/images/nft/9.png',
+  '/images/nft/10.png',
+];
+
+const slideData2 = [
+  '/images/nft/11.png',
+  '/images/nft/12.png',
+  '/images/nft/13.png',
+  '/images/nft/14.png',
+  '/images/nft/15.png',
+  '/images/nft/16.png',
+  '/images/nft/17.png',
+  '/images/nft/18.png',
+  '/images/nft/19.png',
+  '/images/nft/20.png',
 ];
 
 const ContainerHome: FC = () => {
@@ -41,7 +47,7 @@ const ContainerHome: FC = () => {
 
   const handleToggleAccordion = (accordionNumber: number) => {
     setOpenAccordion((prev) =>
-      prev === accordionNumber ? null : accordionNumber,
+      prev === accordionNumber ? null : accordionNumber
     );
   };
 
@@ -93,6 +99,53 @@ const ContainerHome: FC = () => {
               className="absolute bottom-0 md:inline-block left-0"
               loading="lazy"
             />
+            <div className="absolute top-0 w-[100%] h-[100%] flex flex-col justify-between  ">
+              <div className=" flex justify-between items-center w-full  ">
+                <div className="flex-1 flex items-center justify-center"></div>
+                <div className="flex-1 flex items-center justify-center">
+                  <Image
+                    src={'/images/banner_logo_tr.png'}
+                    width={200}
+                    height={0}
+                    alt="hero"
+                    className=""
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex-1 flex items-center justify-center gap-10 ">
+                  <a
+                    href="https://x.com/seighostnft/"
+                    target="blank"
+                    style={{ cursor: 'url(/images/cursor.png), auto' }}
+                  >
+                    <Image
+                      src={'/images/Pallet.png'}
+                      alt="Your SVG"
+                      width={40}
+                      height={40}
+                      loading="lazy"
+                    />
+                  </a>
+                  <a
+                    href="https://x.com/seighostnft/"
+                    target="blank"
+                    style={{ cursor: 'url(/images/cursor.png), auto' }}
+                  >
+                    <RiTwitterXFill
+                      className="text-4xl mx-auto hover:opacity-50 text-white "
+                      style={{ cursor: 'url(/images/cursor.png), auto' }}
+                    />
+                  </a>
+                  <FaDiscord className="text-4xl text-white" />
+                </div>
+              </div>
+              <div className="">
+                <div className="flex flex-col items-center justify-center animate-opacity">
+                  <h1 className="text-white text-[96px] font-bold">EXPLORE</h1>
+                  <MdKeyboardDoubleArrowDown className="text-9xl text-white" />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -111,7 +164,7 @@ const ContainerHome: FC = () => {
               modules={[Autoplay]}
               className="mySwiper"
             >
-              {slideData.map((src, index) => (
+              {slideData1.map((src, index) => (
                 <SwiperSlide key={index}>
                   <div
                     className={`w-[200px] rounded-xl transition-transform duration-300 ${
@@ -152,7 +205,7 @@ const ContainerHome: FC = () => {
               className="mySwiper"
               style={{ direction: 'rtl' }}
             >
-              {slideData.map((src, index) => (
+              {slideData2.map((src, index) => (
                 <SwiperSlide key={index}>
                   <div
                     className={`w-[200px] rounded-xl transition-transform duration-300 ${

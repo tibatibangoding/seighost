@@ -25,11 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 
-   
-
-    cursor: url('/images/cursor.png'), auto;
-    cursor: url('/images/cursor.png'), default;
-    cursor: url('/images/cursor.png'), pointer;
+  cursor: url('/images/cursor.png'), auto;
+  cursor: url('/images/cursor.png'), default;
+  cursor: url('/images/cursor.png'), pointer;
 }
 
 @layer utilities {
@@ -37,6 +35,20 @@ body {
     text-wrap: balance;
   }
 }
+
+@keyframes opacity {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-opacity {
+  animation: opacity 1.5s ease-in-out infinite alternate;
+}
+
 .custom-rtl .swiper-wrapper {
   flex-direction: row-reverse;
 }
