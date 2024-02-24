@@ -43,7 +43,7 @@ const Form: FC<FormType> = ({ handleSubmit }) => {
         type="text"
         value={inputCode}
         onChange={(e) => setInputCode(e.target.value)}
-        className="w-1/3 py-3 text-2xl px-5 rounded-lg"
+        className="lg:w-1/3 py-3 text-2xl px-5 rounded-lg"
       />
       <button
         type="submit"
