@@ -314,6 +314,37 @@ const ContainerHome: FC = () => {
           </div>
         </section>
 
+        <section className="mt-44 max-w-7xl mx-auto ">
+          <div className="flex flex-col justify-center items-center gap-10">
+            <div className="w-2/3 h-[1000px] rounded-xl">
+              <Image
+                src={`/images/4.jpg`}
+                alt={`Image `}
+                width={800}
+                height={0}
+                className="object-cover w-full h-full rounded-xl"
+              />
+            </div>
+            <div className="flex flex-col text-center gap-5">
+              <h1 className="text-6xl font-bold text-white">
+                ARE BRAVE ENOUGH?
+              </h1>
+              <p className="text-xl text-white">
+                SHARE YOUR ENLISTMENT ON X/TWITTER FOR A CHANCE TO WIN A
+                WAITELIST SPOT!
+              </p>
+              <a
+                className="w-full bg-pink-600 text-white font-medium text-2xl py-3 rounded-lg"
+                href="https://twitter.com/intent/post?text=The%20home%20of%20the%20web3%20collective%2C%20Seighost.%0AI%20have%20enlisted%20as%20an%20OG%20Minter%3A%20https%3A%2F%2Fwebseighostnft.vercel.app%2F%0Awill%20you%20join%20us%20%40seighost"
+                data-size="large"
+                target="blank"
+              >
+                SHARE NOW
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section className="mt-44 max-w-7xl mx-auto">
           <div className="mt-4 flex flex-col md:flex-row justify-between items-center">
             <div className="box p-4 flex justify-start items-center mb-4 md:mb-0">
